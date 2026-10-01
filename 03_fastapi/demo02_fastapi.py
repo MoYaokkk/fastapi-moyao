@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get('/')
 async def request_method01():
-    return {'message131': 'hello fastapi'}
+    return {'message': 'hello fastapi'}
 
 
 @app.get('/items/{item_id}')

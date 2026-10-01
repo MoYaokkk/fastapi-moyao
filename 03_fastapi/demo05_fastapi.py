@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-
+# 请求体了解
 # 定义数据模型类,需要继承 BaseModel 的类。
 class Item(BaseModel):
   param1: str = None
