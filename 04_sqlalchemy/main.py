@@ -1,8 +1,7 @@
-from datetime import date
-
 from base import Base
-from database import engine, SessionLocal
+from database import engine,SessionLocal
 from models import Employee,Department #必须要加
+from datetime import date
 
 # 创建表
 def create_table():
@@ -10,6 +9,7 @@ def create_table():
   # 创建所有模型对应的表
   Base.metadata.create_all(bind=engine)
   print("表创建成功")
+
 
 
 
@@ -91,6 +91,7 @@ def delete_data():
         session.close()  # 关闭会话
 
 
+
 def update_data():
     # 获取会话
     session = SessionLocal()
@@ -107,7 +108,6 @@ def update_data():
         print(f"修改失败：{e}")
     finally:
         session.close()  # 关闭会话
-
 
 
 
@@ -217,21 +217,9 @@ def find_data():
     finally:
         session.close()  # 关闭会话
 
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
   # create_table()
   #   insert_data()
-  #  delete_data()
-  #    update_data()
+  # delete_data()
+  # update_data()
   find_data()

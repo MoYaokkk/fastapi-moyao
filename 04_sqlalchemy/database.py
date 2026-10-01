@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # MySQL 连接格式：mysql+pymysql://用户名:密码@主机地址:端口/数据库名
-DATABASE_URL = "mysql+pymysql://root:root@localhost:3306/fastapi_db"
+DATABASE_URL = "mysql+pymysql://root:123456@localhost:3306/fastapi_db"
 
 # 创建引擎(echo=True 会打印执行的 SQL,方便调试),相当于创建Connection连接
 engine = create_engine(
